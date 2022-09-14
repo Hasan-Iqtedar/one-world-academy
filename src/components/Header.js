@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "../styles/header.module.css";
 import logo from "../assets/logo";
 import DropdownMenu from "./DropdownMenu";
 
 const Header = (props) => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.header + " container-center"}>
       <div className={styles.logo}>
@@ -15,12 +17,11 @@ const Header = (props) => {
         <NavLink className={styles.link} to="/">
           Home
         </NavLink>
-        {/* <NavLink className={styles.link} to="/">Courses</NavLink> */}
         <DropdownMenu title="Courses">
-          <div>Free Courses</div>
-          <div>Paid Courses</div>
+          <div onClick={() => navigate("/free-courses")}>Free Courses</div>
+          <div onClick={() => navigate("/paid-courses")}>Paid Courses</div>
         </DropdownMenu>
-        <NavLink className={styles.link} to="/">
+        <NavLink className={styles.link} to="/teachers">
           Teachers
         </NavLink>
         <NavLink className={styles.link} to="/">
