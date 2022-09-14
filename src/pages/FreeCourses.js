@@ -1,6 +1,6 @@
 import Card from "../components/Card";
 import { IoStar } from "react-icons/io5";
-import styles from "../styles/freeCourses.module.css";
+import styles from "../styles/courses.module.css";
 
 import webImg from "../assets/webImg";
 import mlImg from "../assets/mlImg";
@@ -10,7 +10,7 @@ import Header from "../components/Header";
 
 const FreeCourses = (props) => {
   return (
-    <div className={styles.freeCourses + ""}>
+    <div className={styles.courses + ""}>
       <Header />
       <h1 className={styles.pageTitle}>Our Courses</h1>
       <p>
