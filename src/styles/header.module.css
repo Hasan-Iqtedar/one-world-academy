@@ -3,11 +3,12 @@
     width: 100%;
     position: absolute;
     top: 0;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .links {
-    width: 60%;
+    width: 100%;
     justify-content: space-evenly;
     font-size: 18px;
 }
@@ -39,4 +40,17 @@
     color: green;
     font-size: 18px;
     margin: 5px 0 0 0;
+}
+
+@media (min-width: 650px) {
+    .header {
+        flex-direction: row;
+    }
+
+    .links {
+        width: 60%;
+        justify-content: space-evenly;
+        font-size: 18px;
+    }
+
 }
