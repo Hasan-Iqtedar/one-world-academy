@@ -1,0 +1,49 @@
+.courseVideo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.container {
+    padding: 50px;
+    width: 70%;
+    min-height: 100vh;
+    /* border: 1px solid blue; */
+}
+
+.video {
+    height: 400px;
+    /* margin: 50px 50px; */
+    /* border: 1px solid goldenrod; */
+}
+
+.commentSection {
+    min-height: 200px;
+    margin-top: 50px;
+    /* border: 1px solid pink; */
+}
+
+.commentSection h2 {
+    text-align: left;
+}
+
+.comment {
+    border-bottom: 1px solid lightgray;
+}
+
+.playlist {
+    width: 70%;
+    min-height: 100vh;
+    /* border:1px solid green; */
+}
+
+@media (min-width: 950px) {
+    .courseVideo {
+        flex-direction: row;
+    }
+
+    .playlist {
+        width: 30%;
+    }    
+}
