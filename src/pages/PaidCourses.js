@@ -1,5 +1,6 @@
-import Card from "../components/Card";
+import { useNavigate } from "react-router-dom";
 import { IoStar } from "react-icons/io5";
+import Card from "../components/Card";
 import styles from "../styles/courses.module.css";
 
 import webImg from "../assets/webImg";
@@ -9,6 +10,10 @@ import programImg from "../assets/programImg";
 import Header from "../components/Header";
 
 const PaidCourses = (props) => {
+  const navigate = useNavigate();
+
+  const openCourse = () => navigate("/course");
+
   return (
     <div className={styles.courses + ""}>
       <Header />
@@ -19,7 +24,7 @@ const PaidCourses = (props) => {
       </p>
 
       <div className={styles.highlighted + " container-center"}>
-        <Card>
+        <Card onClick={openCourse}>
           <img src={mlImg} alt=""></img>
           <h4 className={styles.title}>Machine Learning</h4>
           <p className={styles.description}>
@@ -29,7 +34,7 @@ const PaidCourses = (props) => {
           </p>
           <span className={styles.price}>200$</span>
         </Card>
-        <Card>
+        <Card onClick={openCourse}>
           <img src={webImg} alt=""></img>
           <h4 className={styles.title}>Web Development</h4>
           <p className={styles.description}>
@@ -45,7 +50,7 @@ const PaidCourses = (props) => {
         top courses in demand
       </p>
       <div className={styles.highlighted + " container-center"}>
-        <Card>
+        <Card onClick={openCourse}>
           <img src={uxImg} alt=""></img>
           <h4 className={styles.courseTitle}>UI/UX </h4>
           <span className={styles.rating}>
@@ -58,7 +63,7 @@ const PaidCourses = (props) => {
           <span className={styles.reviews}>10,8845</span>
           <span className={styles.price}>200$</span>
         </Card>
-        <Card>
+        <Card onClick={openCourse}>
           <img src={programImg} alt=""></img>
           <h4 className={styles.courseTitle}>C++ Programming</h4>
           <span className={styles.rating}>
@@ -71,7 +76,7 @@ const PaidCourses = (props) => {
           <span className={styles.reviews}>10,9343</span>
           <span className={styles.price}>200$</span>
         </Card>
-        <Card>
+        <Card onClick={openCourse}>
           <img src={webImg} alt=""></img>
           <h4 className={styles.courseTitle}>Java</h4>
           <span className={styles.rating}>
