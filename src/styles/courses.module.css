@@ -23,6 +23,7 @@
 .highlighted {
     width: 60%;
     margin: 50px auto;
+    flex-direction: column;
     justify-content: center;
     /* border: 1px solid blue; */
 }
@@ -101,4 +102,32 @@
 
 .packageButton:hover {
     background-color: #ceac25;
+}
+
+@media (min-width: 800px) {
+    .highlighted {
+        width: 90%;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 900px) {
+    .highlighted {
+        width: 80%;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1000px) {
+    .highlighted {
+        width: 70%;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1100px) {
+    .highlighted {
+        width: 60%;
+        flex-direction: row;
+    }
 }
