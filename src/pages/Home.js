@@ -1,10 +1,20 @@
+import Carousel from "../components/Carousel";
 import Header from "../components/Header";
+import background1 from "../assets/backgroundImg";
+import background2 from "../assets/background2.jpg";
+import background3 from "../assets/background3.jpg";
+import background4 from "../assets/background4.jpg";
 import styles from "../styles/home.module.css";
 
 const Home = (props) => {
+  const slides = [background1, background2, background3, background4];
+
   return (
     <div className={styles.home}>
-      <div className={styles.backgroundImg}></div>
+      <div className={styles.background}>
+        <Carousel slides={slides} />
+      </div>
+
       <Header />
       <div className={styles.content + " container-center"}>
         <div className={styles.searchBar}>
